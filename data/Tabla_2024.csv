@@ -1,0 +1,17 @@
+﻿Pos;Logo_Club;Clave;Equipo;Pts;Rendimiento;PJ;PG;PE;PP;GF;GC;DIF;JL;GL;EL;PL;GFL;GCL;PtsL;JV;GGV;EV;PV;GFV;GCV;PtsV
+1;data/Logos/Colo-Colo1.png;Colo-Colo;Colo Colo;67;74%;30;21;4;5;49;21;28;15;12;0;3;27;10;36;15;9;4;2;22;11;31
+2;data/Logos/UdeChile1.png;UdeChile;Universidad de Chile;65;72%;30;19;8;3;53;24;29;15;8;6;1;20;9;30;15;11;2;2;33;15;35
+3;data/Logos/Iquique1.png;Iquique;Deportes Iquique;48;53%;30;14;6;10;53;48;5;15;10;2;3;30;19;32;15;4;4;7;23;29;16
+4;data/Logos/Palestino1.png;Palestino;Palestino;46;51%;30;13;7;10;46;33;13;15;8;3;4;29;15;27;15;5;4;6;17;18;19
+5;data/Logos/UCatolica1.png;UCatolica;Universidad Católica;46;51%;30;13;7;10;44;34;10;15;6;3;6;26;19;21;15;7;4;4;18;15;25
+6;data/Logos/UEspanola1.png;UEspanola;Unión Española;45;50%;30;13;6;11;53;45;18;15;9;0;6;33;24;27;15;4;6;5;20;21;18
+7;data/Logos/Everton1.png;Everton;Everton;45;50%;30;12;9;9;47;41;6;15;6;5;4;19;15;23;15;6;4;5;28;26;22
+8;data/Logos/Coquimbo1.png;Coquimbo;Coquimbo Unido;45;50%;30;12;9;9;37;34;3;15;7;6;2;21;11;27;15;5;3;7;16;23;18
+9;data/Logos/Nublense1.png;Nublense;Ñublense;40;44%;30;11;7;12;40;34;6;15;6;4;5;22;14;22;15;5;3;7;18;20;18
+10;data/Logos/Audax1.png;Audax;Audax Italiano;34;38%;30;10;4;16;36;39;-3;15;5;2;8;19;21;17;15;5;2;8;17;18;17
+11;data/Logos/UCalera1.png;UCalera;Unión La Calera;34;38%;30;9;7;14;29;40;-11;15;5;2;8;19;24;17;15;4;5;6;10;16;17
+12;data/Logos/Huachipato1.png;Huachipato;Huachipato;34;38%;30;9;7;14;28;44;-16;15;6;5;4;16;17;23;15;3;2;10;12;27;11
+13;data/Logos/Cobresal1.png;Cobresal;Cobresal;33;37%;30;8;9;13;42;51;-9;15;7;4;4;30;24;25;15;1;5;9;12;27;8
+14;data/Logos/OHiggins1.png;OHiggins;O'Higgins;31;34%;30;8;7;15;34;53;-19;15;3;5;7;12;28;14;15;5;2;8;22;25;17
+15;data/Logos/Cobreloa1.png;Cobreloa;Cobreloa;31;34%;30;9;4;17;33;62;-29;15;6;3;6;20;22;21;15;3;1;11;13;40;10
+16;data/Logos/Copiapo1.png;Copiapo;Copiapó;24;27%;30;7;3;20;40;61;-21;15;6;2;7;26;23;20;15;1;1;13;14;;
