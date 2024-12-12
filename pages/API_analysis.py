@@ -27,7 +27,7 @@ st.set_page_config(page_title="Análisis API", page_icon="📊", layout="wide")
 
 generarMenu(st.session_state['usuario'])
 
-st.image("pages\Premier.png")
+st.image("pages/Premier.png")
 st.title("Análisis de Datos con API")
 
 #Las siguientes funciones extraen los datos en un dataframe
