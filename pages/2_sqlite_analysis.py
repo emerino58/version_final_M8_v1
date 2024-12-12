@@ -69,7 +69,7 @@ agregar_fondo("Fondo.png")
 
 
 
-st.image("pages\Itau_Black.png")
+st.image("pages/Itau_Black.png")
 st.title("⚽ Estadísticas de Jugadores")
 
 # Conexión a la base de datos
