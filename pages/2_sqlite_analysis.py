@@ -70,13 +70,14 @@ agregar_fondo("Fondo.png")
 
 
 st.image("pages/Itau_Black.png")
-st.title("⚽ Estadísticas de Jugadores")
-
+# st.title("⚽ Estadísticas de Jugadores")
+st.markdown("<h1 style='color: yellow; font-weight: bold;'>⚽ Estadísticas de Jugadores</h1>", unsafe_allow_html=True)
 # Conexión a la base de datos
 conn = sqlite3.connect('data/chile.db')
 
 # Estadísticas de Jugadores
-st.header("Jugadores")
+# st.header("Jugadores")
+st.markdown("<h1 style='color: yellow; font-weight: bold;'>Jugadores</h1>", unsafe_allow_html=True)
 
 # Seleccionar un Club
 #club = "Audax Italiano"
@@ -90,21 +91,26 @@ cols5 = st.columns(2)
 df_team6 = pd.read_sql_query("SELECT * FROM jugadores WHERE equipo = ? ", conn, params = [club])
 cols5[0].dataframe(df_team5, hide_index=True, )
 
-cols5[1].header("Gráfico de Edades")
+#cols5[1].header("Gráfico de Edades")
+cols5[1].markdown("<h2 style='color: yellow; font-weight: bold;'>Gráfico de Edades</h2>", unsafe_allow_html=True)
+
 df_team7 = pd.read_sql_query("SELECT equipo, edad, count('edad') AS cantidad FROM jugadores WHERE equipo = ? GROUP BY edad", conn, params = [club])
 cols5[1].bar_chart(df_team7.set_index('edad')['cantidad'], x_label=[club], y_label="Cantidad")
 
 cols6 = st.columns(2)
-cols6[0].header("Gráfico de Puestos")
+# cols6[0].header("Gráfico de Puestos")
+cols6[0].markdown("<h2 style='color: yellow; font-weight: bold;'>Gráfico de Puestos</h2>", unsafe_allow_html=True)
+
 df_team8 = pd.read_sql_query("SELECT equipo, posicion, count('posicion') AS cantidad FROM jugadores WHERE equipo = ? GROUP BY posicion", conn, params = [club])
 cols6[0].bar_chart(df_team8.set_index('posicion')['cantidad'], x_label=[club], y_label="Cantidad")
 
-cols6[1].header("Gráfico de Nacionalidades")
+#cols6[1].header("Gráfico de Nacionalidades")
+cols6[1].markdown("<h2 style='color: yellow; font-weight: bold;'>Gráfico de Nacionalidades</h2>", unsafe_allow_html=True)
+
 df_team8 = pd.read_sql_query("SELECT equipo, nacionalidad, count('nacionalidad') AS cantidad FROM jugadores WHERE equipo = ? GROUP BY nacionalidad", conn, params = [club])
 a = alt.Chart(df_team8).mark_arc().encode(theta="cantidad", color="nacionalidad")
 
 cols6[1].altair_chart(a, use_container_width=True)
-
 jugador = st.selectbox('Seleccione un Jugador', df_team6['jugador'])
 df_team9 = pd.read_sql_query("SELECT * FROM jugadores WHERE jugador = ?", conn, params = [jugador])
 cols7 = st.columns(2)
@@ -114,8 +120,8 @@ path = df_team10['logo'].astype(str).to_string(index=False)
 cols7[1].image(path, caption=[club], output_format = "auto")
 
 cols8 = st.columns(2)
-cols8[0].header("Gráfico de Métricas")
-
+#cols8[0].header("Gráfico de Métricas")
+cols8[0].markdown("<h2 style='color: yellow; font-weight: bold;'>Gráfico de Métricas</h2>", unsafe_allow_html=True)
 # Grafico de Barras Radial
 
 # Valores para Grafico y las columnas relevantes
@@ -132,7 +138,7 @@ valores = df_graf.iloc[0].values
 labels = [
     'Tiros a Porteria', 'Goles Hechos', 'Precisión de Centros', 
     'Precisión de Pases', 'Precisión de Pases Adelante', 'Precisión de Pases Atrás', 
-    'Precisión de Pases Laterales', 'Presición de Pases C/M', 'Presición de Pases Largos'
+    'Precisión de Pases Laterales', 'Precisión de Pases C/M', 'Precisión de Pases Largos'
 ]
 
 # Número de variables
@@ -162,8 +168,8 @@ for bar, value, angle in zip(bars, valores, angles):
     ax.text(angle, bar.get_height() / 2, f'{value:.1f}', ha='center', va='center', fontsize=10, color='black')
 cols8[0].pyplot(plt.gcf(), use_container_width=True)
 
-cols8[1].header("Gráfico de Participación")
-
+#cols8[1].header("Gráfico de Participación")
+cols8[1].markdown("<h2 style='color: yellow; font-weight: bold;'>Gráfico de Métricas</h2>", unsafe_allow_html=True)
 # Filtrar el rendimiento del club seleccionado
 participacion_jug = (df_team9['minutosj'].values[0] / 2850) * 100
 
@@ -189,6 +195,23 @@ fig.add_trace(Indicator(
 cols8[1].plotly_chart(fig)
 
 # Botón para retroceder página
+st.markdown("""
+    <style>
+    .stButton > button {
+        background-color: red;
+        color: white;
+        font-size: 16px;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-weight: bold;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+
+
+
 btnAnterior = st.button("Anterior")
 if btnAnterior:
     st.switch_page('pages/sqlite_analysis.py')
