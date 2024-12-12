@@ -52,11 +52,11 @@ def set_background_image(image_path):
     )
 
 # Llama a la función para establecer el fondo
-set_background_image("Fondo_Portada.jpg")
+set_background_image("Modulo_8.jpg")
 
 # Contenido de la aplicación
-st.markdown("<h1>Página Principal</h1>", unsafe_allow_html=True)
-
+# st.markdown("<h1>MÓDULO 8</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: black; font-weight: bold; font-size: 500%;'>MÓDULO 8</h1>", unsafe_allow_html=True)
 # Crear un contenedor para el formulario de login y evitar espacios no deseados
 with st.container():
     st.markdown('<div class="login-box">', unsafe_allow_html=True)
@@ -64,5 +64,10 @@ with st.container():
     st.markdown('</div>', unsafe_allow_html=True)
 
 if 'usuario' in st.session_state:
-    st.markdown("### Información página principal", unsafe_allow_html=True)
-    st.write('Análisis de datos con SQLite y API')
+    st.markdown("### Creación de una Aplicación Interactiva con Streamlit", unsafe_allow_html=True)
+    st.write('')
+st.markdown("<h2 style='font-weight: bold; font-size: 120%;'>Objetivo:</h2>", unsafe_allow_html=True)
+st.write('Aplicar los conocimientos adquiridos sobre desarrollo de aplicaciones web utilizando Streamlit para crear una aplicación interactiva que conecte múltiples fuentes de datos, con funcionalidades avanzadas como gestión de sesiones y cache.')
+st.write('')
+#st.write('Análisis de datos con SQLite y API')
+st.markdown("<h2 style='font-weight: bold; font-size: 120%;'>Análisis de datos con SQLite y API</h2>", unsafe_allow_html=True)
