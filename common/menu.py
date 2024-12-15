@@ -28,8 +28,8 @@ def generarMenu(usuario):
         st.page_link("pages/API_analysis.py", label="Liga Inglesa (API)", icon=":material/shopping_cart:")
 
         # Botón para cerrar la sesión
-        btnSalir = st.button("Salir")
-        if btnSalir:
-            st.session_state.clear()
-            # Luego de borrar el Session State reiniciamos la app para mostrar la opción de usuario y clave
-            st.rerun()
+        # btnSalir = st.button("Salir")
+        # if btnSalir:
+        #    st.session_state.clear()
+        #    # Luego de borrar el Session State reiniciamos la app para mostrar la opción de usuario y clave
+        #    st.rerun()
