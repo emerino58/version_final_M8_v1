@@ -99,7 +99,7 @@ club = st.selectbox('Seleccione un Club', df['team'].unique())
 df1 = df.query('team == @club')
 
 cols = st.columns(2)
-cols[0].header("Listado")
+cols[0].header("Plantilla")
 cols[0].dataframe(df1, hide_index=True, )
 
 cols[1].header("Gráfico de Edades")
